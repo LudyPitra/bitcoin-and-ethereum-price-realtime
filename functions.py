@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-
 def coin_price_consult(coin_name: str):
 
     url = 'https://api.coingecko.com/api/v3/simple/price'
@@ -20,7 +18,6 @@ def coin_price_consult(coin_name: str):
     headers = {
         'x-cg-demo-api-key': os.getenv('COINGECKO_API_KEY')
     }
-
 
     try:
         response = requests.get(url, params=params, headers=headers)
